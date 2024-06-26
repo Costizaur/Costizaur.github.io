@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --hue: 88;
+    --hue: 280;
     --l1: hsl(var(--hue),10%,100%);
     --l2: hsl(var(--hue),10%,95%);
     --l3: hsl(var(--hue),10%,90%);
@@ -19,10 +27,25 @@
     font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
 }
 
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --l1: hsl(var(--hue),10%,50%);
+        --l2: hsl(var(--hue),10%,45%);
+        --l3: hsl(var(--hue),10%,40%);
+        --l4: hsl(var(--hue),10%,35%);
+        --l5: hsl(var(--hue),10%,30%);
+        --l6: hsl(var(--hue),10%,25%);
+        --l7: hsl(var(--hue),10%,20%);
+        --l8: hsl(var(--hue),10%,15%);
+        --text: hsl(var(--hue),10%,80%);
+        --r: hsl(3,90%,70%);
+    }
+}
+
 body {
     display: flex;
     height: 100vh;
-    font-family: Arial, sans-serif;
     background: var(--l5);
 }
 
@@ -35,17 +58,15 @@ body {
     height: 100vh;
     overflow-y: auto;
     position: absolute;
-    
     box-shadow: 0.15em 0.15em 0.3em var(--l7), -0.15em -0.15em 0.3em var(--l1);
 } */
 
 .main-container {
     width: 100%;
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100vh;
-    /* outline: 1px solid red; */
 }
 
 .main-header {
@@ -56,7 +77,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline: 1px solid red;
     box-shadow: 0.15em 0.15em 0.3em var(--l7), -0.15em -0.15em 0.3em var(--l1);
 }
 
@@ -65,21 +85,22 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    outline: 1px solid red;
 }
 
 .name {
+    color: var(--l8);
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
     margin: 0;
-    outline: 1px solid red;
 }
 
 .nav-buttons button {
+    font-family: "Itim", cursive;
     background: var(--l2);
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 16px;
-    /* outline: 1px solid red; */
+    font-size: 20px;
     border-radius: 0.15em;
     box-shadow: 0.15em 0.15em 0.3em var(--l7), -0.15em -0.15em 0.3em var(--l1);
     transition: background 0.2s;
@@ -94,62 +115,48 @@ body {
     box-shadow: 0.15em 0.15em 0.3em var(--l1) inset, -0.15em -0.15em 0.3em var(--l7) inset;
 }
 
+.nav-buttons button:focus {
+    outline: 2px solid var(--l7);
+}
+
 .content {
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
     width: 80%;
-    outline: 1px solid red;
-    
+    text-align: center;
+}
+
+.content h2 {
+    font-weight: 600;
 }
 
 .content-section {
     display: none;
-    outline: 1px solid red;
 }
 
 .content-section.active {
     display: block;
 }
 
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --l1: hsl(var(--hue),10%,50%);
-    --l2: hsl(var(--hue),10%,45%);
-    --l3: hsl(var(--hue),10%,40%);
-    --l4: hsl(var(--hue),10%,35%);
-    --l5: hsl(var(--hue),10%,30%);
-    --l6: hsl(var(--hue),10%,25%);
-    --l7: hsl(var(--hue),10%,20%);
-    --l8: hsl(var(--hue),10%,15%);
-    --text: hsl(var(--hue),10%,80%);
-    --r: hsl(3,90%,70%);
-  }
-}
-.popup{
-    margin:auto;
+.popup {
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
     z-index: 9999;
-    width:50vw;
-    height:50vh;
+    width: 50vw;
+    height: 50vh;
     background-color: aliceblue;
     position: fixed;
-    border:5px solid blue;
+    border: 5px solid blue;
     border-top: 30px solid blue;
     border-radius: 1%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .close-button {
     display: flex; 
     justify-content: center; 
@@ -157,13 +164,101 @@ body {
     position: absolute;
     top: -25px; 
     right: 0px; 
-    outline: 1px solid white;
     color: white;
     background-color: red;
     border: none;
     cursor: pointer;
-    border-radius: 10%;
-    width: 20px;
-    height: 20px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.close-button:focus {
+    outline: 2px solid white;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: var(--l1);
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid var(--l6);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 1s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.carousel-item figcaption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.carousel-item p {
+    font-size: 1em;
+    color: var(--text);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.carousel-inner::-webkit-scrollbar {
+    display: none;
+}
+.carousel-inner {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
