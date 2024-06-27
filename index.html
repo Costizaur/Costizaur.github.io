@@ -16,9 +16,6 @@
             <button class="close-button">X</button>
         </div>
     </div>
-    <!-- <aside class="sidebar">
-        
-    </aside> -->
     <div class="main-container">
         <header class="main-header">
             <div class="header-content">
@@ -27,54 +24,73 @@
                     <button data-section="home">Home</button>
                     <button data-section="projects">Projects</button>
                     <button data-section="contact">Contact</button>
+                    <button data-section="resume">Resume</button>
                 </nav>
             </div>
         </header>
         <main class="content">
             <section id="home" class="content-section active">
-                <h2>Home</h2>
-                <p>Welcome to my portfolio!</p>
+                <div class="content-box">
+                    <h2>Home</h2>
+                    <p>Welcome to my portfolio! Here you will find information about my projects, experience, and skills.</p>
+                </div>
             </section>
             <section id="projects" class="content-section">
-                <h2>Projects</h2>
-                <p>Here are some of my projects.</p>
-                <section class="carousel">
-                    <div class="carousel-inner">
-                        <article class="carousel-item active">
-                            <figure>
-                                <div class="sketchfab-embed-wrapper"> <iframe title="TreeHouse" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="700" height="500" src="https://sketchfab.com/models/d0dfedd1ca4d4c47b47ce427011cdc8f/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/treehouse-d0dfedd1ca4d4c47b47ce427011cdc8f?utm_medium=embed&utm_campaign=share-popup&utm_content=d0dfedd1ca4d4c47b47ce427011cdc8f" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> TreeHouse </a> by <a href="https://sketchfab.com/Costin21?utm_medium=embed&utm_campaign=share-popup&utm_content=d0dfedd1ca4d4c47b47ce427011cdc8f" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Costin21 </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=d0dfedd1ca4d4c47b47ce427011cdc8f" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
-                                <figcaption>
-                                    <h3>Description for Image 1</h3>
-                                    <p>Additional information or details about Image 1.</p>
-                                </figcaption>
-                            </figure>
-                        </article>
-                        <article class="carousel-item">
-                            <figure>
-                                <img src="/images/image1.png" alt="Image 2">
-                                <figcaption>
-                                    <h3>Description for Image 2</h3>
-                                    <p>Additional information or details about Image 2.</p>
-                                </figcaption>
-                            </figure>
-                        </article>
-                        <article class="carousel-item">
-                            <figure>
-                                <img src="image3.jpg" alt="Image 3">
-                                <figcaption>
-                                    <h3>Description for Image 3</h3>
-                                    <p>Additional information or details about Image 3.</p>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <button class="carousel-control prev" aria-label="Previous">&lt;</button>
-                    <button class="carousel-control next" aria-label="Next">&gt;</button>
-                </section>
-                
+                <div class="content-box">
+                    <h2>Projects</h2>
+                    <p>Here are some of my projects.</p>
+                    <section class="carousel">
+                        <div class="carousel-inner">
+                            <article class="carousel-item active">
+                                <figure>
+                                    <div class="sketchfab-embed-wrapper"> 
+                                        <iframe title="TreeHouse" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="400" height="400" src="https://sketchfab.com/models/d0dfedd1ca4d4c47b47ce427011cdc8f/embed"></iframe> 
+                                        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                                            <a href="https://sketchfab.com/3d-models/treehouse-d0dfedd1ca4d4c47b47ce427011cdc8f?utm_medium=embed&utm_campaign=share-popup&utm_content=d0dfedd1ca4d4c47b47ce427011cdc8f" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> TreeHouse </a> by 
+                                            <a href="https://sketchfab.com/Costin21?utm_medium=embed&utm_campaign=share-popup&utm_content=d0dfedd1ca4d4c47b47ce427011cdc8f" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Costin21 </a> on 
+                                            <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=d0dfedd1ca4d4c47b47ce427011cdc8f" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                                        </p>
+                                    </div>
+                                    <figcaption class="description-project">
+                                        <h3>This is my first 3D project</h3>
+                                        <p>This is my first 3D project. After modeling in Maya, I used Adobe Substance Painter to texture the surfaces. I created every UV in there. It was a fun way to get started learning 3D fundamentals, and I'm excited to improve my modeling and texturing skills!</p>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                        <button class="carousel-control prev" aria-label="Previous">&lt;</button>
+                        <button class="carousel-control next" aria-label="Next">&gt;</button>
+                    </section>
+                </div>
+            </section>
             <section id="contact" class="content-section">
-                <h2>Contact</h2>
-                <p>Get in touch with me.</p>
+                <div class="content-box">
+                    <h2>Contact</h2>
+                    <p>Get in touch with me. You can reach me via email or by filling out the form below:</p>
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xzzppqal" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section id="resume" class="content-section">
+                <div class="content-box">
+                    <h2>Resume</h2>
+                    <p>Here is my resume. It includes details about my education, work experience, skills, and projects.</p>
+                </div>
             </section>
         </main>
     </div>
