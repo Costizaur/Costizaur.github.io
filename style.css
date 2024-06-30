@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-
 * {
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
@@ -10,7 +9,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    zoom: 97%;
+    zoom:97%;
 }
 
 :root {
@@ -26,9 +25,7 @@
     --text: hsl(var(--hue), 10%, 20%);
     --r: hsl(3, 90%, 35%);
     font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
-   
 }
-
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
     :root {
@@ -44,7 +41,6 @@
         --r: hsl(3, 90%, 70%);
     }
 }
-
 body {
     display: flex;
     height: 100vh;
@@ -65,7 +61,7 @@ body {
     border-bottom: 1px solid var(--l6);
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     box-shadow: 0.15em 0.15em 0.3em var(--l7), -0.15em -0.15em 0.3em var(--l1);
 }
@@ -82,26 +78,28 @@ body {
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     margin: 0;
-}
-.contact{
     
-  background-color: coral!important;
 }
 
+.nav-buttons {
+    display: flex;
+    
+   
+    justify-content: center;
+    flex-grow: 1;
+}
 
 .nav-buttons button {
-    /* font-family: "Itim", cursive; */
-    
-   transform: translate(-450px);
     border: none;
-    padding: 20px;
-    font-size: 30px;
+    padding: 10px 20px;
+    font-size: 1em;
     font-weight: 600;
     cursor: pointer;
     background: var(--l2);
     border-radius: 0.15em;
     box-shadow: 0.15em 0.15em 0.3em var(--l7), -0.15em -0.15em 0.3em var(--l1);
     transition: background 0.2s;
+    margin: 0 5px;
 }
 
 .nav-buttons button:hover {
@@ -115,6 +113,10 @@ body {
 
 .nav-buttons button:focus {
     outline: 2px solid var(--l7);
+}
+
+.contact {
+    background-color: coral!important;
 }
 
 .content {
@@ -138,15 +140,18 @@ body {
 .content-section.active {
     display: block;
 }
-.description p {
-padding-left: 10px;
-padding-right: 10px;
-padding-top: 10px;
-}
-.description h2{
-    text-align: center;
 
+/* Additional CSS for other elements */
+.description p {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 }
+
+.description h2 {
+    text-align: center;
+}
+
 .popup {
     display: flex;
     align-items: center;
@@ -252,18 +257,12 @@ padding-top: 10px;
     margin: auto;
     text-align: left;
 }
-.content-box h2{
-text-align: center;
-padding-bottom: 10px;
+
+.content-box h2 {
+    text-align: center;
+    padding-bottom: 10px;
 }
-.text-not{
-    font-style: italic;
-}
-.game{
-    display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 /* Form styles */
 .contact-form {
     display: flex;
